@@ -4,7 +4,7 @@ pkgdesc="ROS - Contains a set of tools that can be used from a hard realtime thr
 url='https://wiki.ros.org/realtime_tools'
 
 pkgname='ros-melodic-realtime-tools'
-pkgver='1.13.1'
+pkgver='1.15.0'
 _pkgver_patch=0
 arch=('any')
 pkgrel=0
@@ -27,9 +27,9 @@ depends=(${ros_depends[@]})
 # sha256sums=('SKIP')
 
 # Tarball version (faster download)
-_dir="realtime_tools-release-release-melodic-realtime_tools-${pkgver}-${_pkgver_patch}"
-source=("${pkgname}-${pkgver}-${_pkgver_patch}.tar.gz"::"https://github.com/ros-gbp/realtime_tools-release/archive/release/melodic/realtime_tools/${pkgver}-${_pkgver_patch}.tar.gz")
-sha256sums=('399aca3a72c59e2bd7bfc508e7dca8cb53d95ee76f067f4b11ecdaa49ea7e225')
+_dir="realtime_tools-${pkgver}"
+source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-controls/realtime_tools/archive/${pkgver}.tar.gz")
+sha256sums=('4ba0833ae3b4a7bf45a6f678a0fcbf7570b9383107e45d809f2007ad07d4e430')
 
 build() {
   # Use ROS environment variables
